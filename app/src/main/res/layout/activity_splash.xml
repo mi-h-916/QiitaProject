@@ -8,7 +8,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".view.activity.SplashActivity"
-        android:background="#00fc3f">
+        android:background="@color/splash_background">
 
         <TextView
             android:id="@+id/title_head"
@@ -17,8 +17,8 @@
             android:text="Q"
             android:textStyle="bold"
             android:textSize="100sp"
-            android:textColor="#FFFFFF"
-            android:background="#9900fc3f"
+            android:textColor="@color/common_white"
+            android:background="@color/splash_trans_back"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
@@ -31,8 +31,8 @@
             android:text="iita"
             android:textStyle="bold"
             android:textSize="60sp"
-            android:textColor="#FFFFFF"
-            android:background="#9900fc3f"
+            android:textColor="@color/common_white"
+            android:background="@color/splash_trans_back"
             android:visibility="gone"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toRightOf="@id/title_head"
