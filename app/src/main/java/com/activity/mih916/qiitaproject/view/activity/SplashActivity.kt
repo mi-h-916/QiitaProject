@@ -1,5 +1,6 @@
 package com.activity.mih916.qiitaproject.view.activity
 
+import android.content.Intent
 import android.databinding.DataBindingUtil
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
@@ -58,6 +59,7 @@ class SplashActivity :AppCompatActivity(){
                 animationSet.setAnimationListener(object : Animation.AnimationListener{
                     override fun onAnimationEnd(animation: Animation?) {
                         binding.titleContent.visibility = View.GONE
+                        navigateToHomeActivity()
                     }
                     override fun onAnimationRepeat(animation: Animation?) { }
 
@@ -75,5 +77,11 @@ class SplashActivity :AppCompatActivity(){
         })
 
         binding.titleHead.startAnimation(translateVerticalAnimation)
+    }
+
+    private fun navigateToHomeActivity() {
+        val intent = Intent(this, MainActivity::class.java)
+        startActivity(intent)
+        finish()
     }
 }
