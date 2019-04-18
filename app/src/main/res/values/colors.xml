@@ -3,4 +3,11 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+
+    <!-- Common Item -->
+    <color name="common_white">#FFFFFF</color>
+
+    <!-- SplashActivity -->
+    <color name="splash_background">#00fc3f</color>
+    <color name="splash_trans_back">#9900fc3f</color>
 </resources>
