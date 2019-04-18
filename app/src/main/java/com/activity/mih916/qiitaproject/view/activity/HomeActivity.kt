@@ -8,7 +8,7 @@ import com.activity.mih916.qiitaproject.R
 import com.activity.mih916.qiitaproject.databinding.ActivityMainBinding
 import com.activity.mih916.qiitaproject.repository.ItemRepository
 
-class MainActivity : AppCompatActivity() {
+class HomeActivity : AppCompatActivity() {
 
     val binding:ActivityMainBinding by lazy {
         DataBindingUtil.setContentView<ActivityMainBinding>(this, R.layout.activity_main)
