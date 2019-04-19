@@ -7,8 +7,9 @@ import android.util.Log
 import com.activity.mih916.qiitaproject.R
 import com.activity.mih916.qiitaproject.databinding.ActivityMainBinding
 import com.activity.mih916.qiitaproject.repository.ItemRepository
+import com.activity.mih916.qiitaproject.repository.UserRepository
 
-class MainActivity : AppCompatActivity() {
+class HomeActivity : AppCompatActivity() {
 
     val binding:ActivityMainBinding by lazy {
         DataBindingUtil.setContentView<ActivityMainBinding>(this, R.layout.activity_main)
@@ -19,10 +20,16 @@ class MainActivity : AppCompatActivity() {
         binding.text.text = "file_changed"
 
         val itemRepository = ItemRepository()
+        val userRepository = UserRepository()
 
         itemRepository.getItemList { articleList ->
             articleList.forEach { article ->
                 Log.d("test_data", "title : ${article.title}")
+            }
+        }
+        userRepository.getUserList { userList ->
+            userList.forEach { user ->
+               Log.d("user_data", "user : ${user.name}")
             }
         }
     }
