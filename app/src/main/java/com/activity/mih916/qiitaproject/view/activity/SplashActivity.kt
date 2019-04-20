@@ -15,7 +15,7 @@ class SplashActivity :AppCompatActivity(){
         DataBindingUtil.setContentView<ActivitySplashBinding>(this, R.layout.activity_splash)
     }
 
-    private val DURATION_TIME = 2000L
+    private val DURATION_TIME = 1500L
     private val REPEAT_COUNT = Animation.ABSOLUTE
     private val REPEAT_MODE = Animation.RESTART
 
