@@ -17,7 +17,6 @@ class HomeActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding.text.text = "file_changed"
 
         val itemRepository = ItemRepository()
         val userRepository = UserRepository()
