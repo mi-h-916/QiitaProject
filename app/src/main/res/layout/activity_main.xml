@@ -26,10 +26,13 @@
 
                 <LinearLayout
                     android:id="@+id/account_area"
-                    android:layout_width="match_parent"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
                     android:gravity="center"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/article_like_area"
                     android:layout_marginTop="8dp"
                     android:layout_marginStart="8dp"
                     android:layout_marginEnd="8dp">
@@ -49,6 +52,32 @@
                         android:maxLines="1"
                         android:ellipsize="end"
                         android:gravity="left"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/article_like_area"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginTop="8dp">
+
+                    <ImageView
+                        android:id="@+id/article_like_img"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:background="@drawable/background_corner"
+                        android:src="@drawable/ic_article_like" />
+
+                    <TextView
+                        android:id="@+id/article_like_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"/>
 
                 </LinearLayout>
 
