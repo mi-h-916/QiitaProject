@@ -3,11 +3,13 @@ package com.activity.mih916.qiitaproject.view.activity
 import android.databinding.DataBindingUtil
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.support.v7.widget.LinearLayoutManager
 import android.util.Log
 import com.activity.mih916.qiitaproject.R
 import com.activity.mih916.qiitaproject.databinding.ActivityMainBinding
 import com.activity.mih916.qiitaproject.repository.ItemRepository
 import com.activity.mih916.qiitaproject.repository.UserRepository
+import com.activity.mih916.qiitaproject.view.adapter.ArticleCardAdapter
 
 class HomeActivity : AppCompatActivity() {
 
@@ -17,14 +19,9 @@ class HomeActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
-        //TODO: Use response data
-        val tagList = mutableListOf<String>("kotlin","android","livedata","android開発")
-        binding.acountName.text = "@ggk_odiic"
-        binding.articleTitle.text = "LiveDataを用いてDataBindingでLayoutを制御してみた結果Activity内の状態がどういい方向に変わっていったか書き記してみる"
-        val tags = tagList.joinToString(",")
-        binding.articleTag.text = tags
-        binding.articleLikeCount.text = "100"
+        val adapter = ArticleCardAdapter()
+        binding.articleRecycler.layoutManager = LinearLayoutManager(this)
+        binding.articleRecycler.adapter = adapter
         val itemRepository = ItemRepository()
         val userRepository = UserRepository()
 
