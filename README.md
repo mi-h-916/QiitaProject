@@ -2,4 +2,6 @@
 
 Qiita Articles Application
 
-Kotlin,DataBinding
+# Overview
+
+this project means that you can read Qiita's articles in your app.
