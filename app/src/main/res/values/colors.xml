@@ -8,6 +8,10 @@
     <color name="common_white">#FFFFFF</color>
 
     <!-- SplashActivity -->
-    <color name="splash_background">#00fc3f</color>
-    <color name="splash_trans_back">#9900fc3f</color>
+    <color name="splash_background">#31B404</color>
+    <color name="splash_trans_back">#9931B404</color>
+
+    <!-- HomeActivity -->
+    <color name="home_like_count">#01A9DB</color>
+    <color name="divider">#d3d3d3</color>
 </resources>
