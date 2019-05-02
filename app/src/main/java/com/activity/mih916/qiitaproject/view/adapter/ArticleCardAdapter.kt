@@ -7,21 +7,24 @@ import android.view.View
 import android.view.ViewGroup
 import com.activity.mih916.qiitaproject.R
 import com.activity.mih916.qiitaproject.databinding.ArticleCardItemBinding
+import com.activity.mih916.qiitaproject.entity.ItemEntity
 
-class ArticleCardAdapter(): RecyclerView.Adapter<ArticleCardAdapter.ItemHolder>() {
+class ArticleCardAdapter(private val articleInfoList: List<ItemEntity>): RecyclerView.Adapter<ArticleCardAdapter.ItemHolder>() {
 
     override fun getItemCount(): Int {
-        return 10
+        return articleInfoList.size
     }
 
     override fun onBindViewHolder(holder: ItemHolder, position: Int) {
-        //TODO: Use response data
-        val tagList = mutableListOf<String>("kotlin", "android", "livedata", "android開発")
-        holder.binding.acountName.text = "@ggk_odiic"
-        holder.binding.articleTitle.text = "LiveDataを用いてDataBindingでLayoutを制御してみた結果Activity内の状態がどういい方向に変わっていったか書き記してみる"
+        val tagList = mutableListOf<String>()
+        articleInfoList[position].tags.forEach {
+            tagList.add(it.name)
+        }
+        holder.binding.acountName.text = articleInfoList[position].user.id
+        holder.binding.articleTitle.text = articleInfoList[position].title
         val tags = tagList.joinToString(",")
         holder.binding.articleTag.text = tags
-        holder.binding.articleLikeCount.text = "100"
+        holder.binding.articleLikeCount.text = articleInfoList[position].likes_count.toString()
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ItemHolder {
