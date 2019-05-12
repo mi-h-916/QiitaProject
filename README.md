@@ -5,6 +5,7 @@ Qiita Articles Application
 language : kotlin
 os : android
 IDE : AndroidStudio 3.1.3
+targetSDK : 28
 
 # Overview
 
